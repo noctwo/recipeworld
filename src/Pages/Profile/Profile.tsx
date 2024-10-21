@@ -43,7 +43,6 @@ const Profile = () => {
                 console.error(userFavoritesQuery.error.message)
             } else {
                 setUserFavorites(userFavoritesQuery.data);
-                console.log(userFavoritesQuery.data)
             }
         }
         fetchUserFavorites();
@@ -68,6 +67,7 @@ const Profile = () => {
                     {userFavorites?.map((favs) =>(
                         <div key={favs.id}>
                         <p>{favs.Recipes!.name}</p>
+                        <img src={`${favs.Recipes?.img_url}`} />
                         </div>
                     ))}
                    

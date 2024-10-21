@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { supabaseClient } from "../../lib/supabaseClient";
 import { useUserContext } from "../../Context/UserContext";
 import "./Profile.css"
+import { Link } from "react-router-dom";
 
 const Profile = () => {
 
@@ -62,15 +63,16 @@ const Profile = () => {
             ))}
             </div>
             <div className="user-favorites-wrapper">
+                <h2>Deine Favoriten</h2>
                 <div className="user-favorites-container">
-                    
                     {userFavorites?.map((favs) =>(
-                        <div key={favs.id}>
-                        <p>{favs.Recipes!.name}</p>
+                        <div key={favs.id} className="user-favs-card">
+                        <Link to={`/recipe/${favs.Recipes?.id}`}>
                         <img src={`${favs.Recipes?.img_url}`} />
+                        <p>{favs.Recipes?.name}</p>
+                        </Link>
                         </div>
                     ))}
-                   
                 </div>
             </div>
         </div>

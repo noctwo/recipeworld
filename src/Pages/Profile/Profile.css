@@ -8,8 +8,25 @@
     width: 80%;
 }
 
+.user-favorites-wrapper h2{
+    text-align: center;
+}
+
+
 .user-favorites-container{
     width: 80%;
-    margin: 0 auto;
-    background-color: var(--rw-default-light-gray);
+    margin: 3em auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 1em;
+}
+
+.user-favs-card{
+    width: 250px;
+    text-align: center;
+}
+
+.user-favs-card img{
+    border-radius: 16px;
 }

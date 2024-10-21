@@ -3,6 +3,16 @@
     gap: 2em;
 }
 
+.detail-text-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detail-fav-container{
+    cursor: pointer;
+}
+
 .detail-text-container{
     width: 70%;
 }

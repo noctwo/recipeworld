@@ -6,6 +6,8 @@ import { Recipes } from "../../Types/supabase-own-types";
 import Hero from "../../Components/Hero/Hero";
 import Ingredientsbar from "../../Components/Ingredients/Ingredientsbar";
 import InstructionsList from "../../Components/Instructions/InstructionsList";
+import { IoBookmarkOutline } from "react-icons/io5";
+import { IoBookmark } from "react-icons/io5";
 
 const Detail = () => {
 
@@ -44,7 +46,13 @@ const Detail = () => {
         <div className="content-wrapper">
         <div className="detail-container">
         <div className="detail-text-container">
+        <div className="detail-text-header">
         <h2>{singleRecipe?.name}</h2>
+        <div className="detail-fav-container">
+            <IoBookmarkOutline />
+            <IoBookmark />
+        </div>
+        </div>
         <p>{singleRecipe?.description}</p>
         <p>{singleRecipe?.instructions}</p>
         <InstructionsList />

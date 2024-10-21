@@ -147,10 +147,12 @@ const Home = () => {
         </Link>
         </div>
         <div className="recipe-card-horizontal-text-container">
+        <div className="recipe-card-horizontal-header">
         <h3>{recipe.name}</h3>
         {user? <div className="favorite-icon-container">
             {recipe.Favorites.find((favorite) => favorite.recipe_id === recipe.id) ? (<IoBookmark onClick={() => deleteFavorite(recipe.id)} /> ): (<IoBookmarkOutline onClick={() => addFavorite(recipe.id)} />)}
         </div> : <></>}
+        </div>
         <p>Rating: {recipe.rating}</p>
         <p>Kategorie: {getCategoryName(recipe.category_id)}</p>
         <p>{recipe.description.split(" ").slice(0,30).join(" ")} ...</p>

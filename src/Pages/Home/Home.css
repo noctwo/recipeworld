@@ -39,6 +39,16 @@
     height: 275px;
 }
 
+.recipe-card-horizontal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.favorite-icon-container{
+    cursor: pointer;
+}
+
 .recipe-card-horizontal-img-container{
     width: 30%;
 }

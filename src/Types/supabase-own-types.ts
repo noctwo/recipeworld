@@ -12,15 +12,19 @@ export type RecipesWithFavorites = Recipes & {
     }[];
 }
 export type FavoritesWithRecipes = Favorites & {
+    id: string;
+    recipe_id: string;
+    user_id: string;
+    created_at: string;
     Recipes: {
-        id: string,
-        name: string, 
-        description: string, 
-        servings: number, 
-        instructions: string,
-        created_at: Date,
-        category_id: string,
-        img_url: string
-        rating: number
-    }[];
+        id: string;
+        name: string;
+        description: string;
+        servings: number | null;
+        instructions: string;
+        created_at: string;
+        category_id: string;
+        img_url: string | null;
+        rating: number | null;
+    } | null;
 }

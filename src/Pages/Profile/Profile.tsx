@@ -1,4 +1,4 @@
-import { Profiles, Favorites } from "../../Types/supabase-own-types";
+import { Profiles, FavoritesWithRecipes } from "../../Types/supabase-own-types";
 import { useEffect, useState } from "react";
 import { supabaseClient } from "../../lib/supabaseClient";
 import { useUserContext } from "../../Context/UserContext";
@@ -7,7 +7,7 @@ import "./Profile.css"
 const Profile = () => {
 
     const [profiles, setProfiles] = useState<Profiles[]>();
-    const [userFavorites, setUserFavorites] = useState<Favorites[]>();
+    const [userFavorites, setUserFavorites] = useState<FavoritesWithRecipes[]>();
     const userContext = useUserContext();
     const user = userContext?.user;
 
@@ -31,7 +31,12 @@ const Profile = () => {
         const fetchUserFavorites = async () => {
             const userFavoritesQuery = await supabaseClient
             .from("Favorites")
-            .select("*")
+            .select(`
+                *,
+                Recipes (
+                *
+                )
+            `)
             .eq("user_id", user!.id);
 
             if (userFavoritesQuery.error){
@@ -49,7 +54,7 @@ const Profile = () => {
             <h2>Dein Profil</h2>
             <p>E-Mail-Adresse: {user?.email}</p>
             {profiles?.map((profile)=>(
-            <div className="profile-infos">
+            <div className="profile-infos" key={profile.id}>
             <p>Vorname: {profile.first_name}</p>
             <p>Nachname: {profile.last_name}</p>
             <p>Lieblingsessen: {profile.favorite_food}</p>
@@ -58,9 +63,13 @@ const Profile = () => {
             </div>
             <div className="user-favorites-wrapper">
                 <div className="user-favorites-container">
+                    
                     {userFavorites?.map((favs) =>(
-                        <p>{favs.recipe_id}</p>
+                        <div key={favs.id}>
+                        <p>{favs.Recipes.name}</p>
+                        </div>
                     ))}
+                   
                 </div>
             </div>
         </div>

@@ -12,7 +12,4 @@
     width: 80%;
     margin: 0 auto;
     background-color: var(--rw-default-light-gray);
-    border-radius: 16px;
-    padding: 5em;
-    text-align: center;
 }

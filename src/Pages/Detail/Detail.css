@@ -1,0 +1,8 @@
+.detail-container{
+    display: flex;
+    gap: 2em;
+}
+
+.detail-text-container{
+    width: 70%;
+}

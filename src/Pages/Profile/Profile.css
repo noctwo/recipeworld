@@ -1,0 +1,17 @@
+.profile-container{
+    background-color: var(--rw-default-light-gray);
+    display: flex;
+    flex-direction: column;
+    padding: 5em;
+    border-radius: 16px;
+    margin: 5em auto;
+    width: 80%;
+}
+
+.user-favorites-container{
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--rw-default-light-gray);
+    border-radius: 16px;
+    padding: 5em;
+}

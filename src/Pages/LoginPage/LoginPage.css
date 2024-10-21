@@ -1,0 +1,38 @@
+.login-container{
+    background-color: var(--rw-default-light-gray);
+    display: flex;
+    flex-direction: column;
+    padding: 5em;
+    border-radius: 16px;
+    margin: 5em auto;
+    width: 80%;
+}
+
+.login-container form{
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+    margin-bottom: 3em;
+    width: 30vw;
+    margin: 0 auto;
+}
+
+.login-container form input{
+    padding: 1em 2em;
+    border: none;
+    border-radius: 16px;
+}
+
+.reset-password-container{
+    display: flex;
+    gap: 1em;
+    margin: 2em auto;
+}
+
+.reset-password-container button{
+    background-color: var(--rw-lightyellow);
+}
+
+.reset-password-container button:hover{
+    background-color: var(--rw-darkyellow);
+}

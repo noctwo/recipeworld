@@ -1,0 +1,23 @@
+header{
+    border-top: 10px solid var(--rw-lightyellow);
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+.nav-link-container{
+    display: flex;
+    gap: 2em;
+}
+
+.logout-button{
+    margin-left: 1em;
+}

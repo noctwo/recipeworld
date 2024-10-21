@@ -1,0 +1,11 @@
+.instructions-container{
+    margin-top: 2em;
+    padding: 2em;
+}
+
+.instructions-list-container{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}

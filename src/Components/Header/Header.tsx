@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 import { useUserContext } from "../../Context/UserContext";
 import { supabaseClient } from "../../lib/supabaseClient";
+import Logo from "../Logo/Logo";
+Logo;
 
 interface HeaderProps {
   dark: boolean;
@@ -33,7 +35,7 @@ const Header: React.FC<HeaderProps> = (props) => {
       <nav>
         <Link to={"/"}>
           <div className="header-logo">
-            <img src="Logo.svg" alt="company logo" />
+            <Logo />
           </div>
         </Link>
         <div className="nav-link-container">

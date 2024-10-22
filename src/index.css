@@ -64,9 +64,29 @@ button:hover{
   .nav-link-container a,
   .login-status-container span,
   .login-status-container a,
+  .ingredients-sidebar span,
   .content-wrapper,
   h1, h2, h3, p
   {
     color: var(--rw-darkmode-text);
+  }
+
+  .popular-card,
+  .recipe-card-horizontal,
+  .ingredients-sidebar,
+  .profile-container{
+    background-color: var(--rw-darkmode-bg);
+    border: 1px solid var(--rw-darkmode-text);
+  }
+
+  .favorite-icon-container svg,
+  .detail-fav-container svg,
+  .header-logo svg{
+    fill: var(--rw-darkmode-text);
+    stroke: var(--rw-darkmode-text);
+  }
+
+  .dark-icon{
+    fill: var(--rw-lightyellow);
   }
 }

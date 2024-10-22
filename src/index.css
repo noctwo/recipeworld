@@ -10,6 +10,8 @@
   --rw-darkyellow: #FFDB63;
   --rw-default-text: #2c2b2b;
   --rw-default-light-gray: #F5F2F2;
+  --rw-darkmode-bg: #1e1e1e;
+  --rw-darkmode-text:#f8f5f5;
 }
 
 *{
@@ -49,4 +51,19 @@ button:hover{
   max-width: 80vw;
   margin: 0 auto 5em auto;
   min-height: 75vh;
+}
+
+
+.dark-mode-on{
+  background-color: var(--rw-darkmode-bg);
+  color: var(--rw-darkmode-text);
+
+  .hero,
+  .blogs,
+  .blogpost-card,
+  .blog-card-author-infos,
+  .calculator,
+  .calc-inner-input-wrapper{
+    background-color: var(--rw-darkmode-bg);
+  }
 }

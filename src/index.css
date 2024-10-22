@@ -58,12 +58,15 @@ button:hover{
   background-color: var(--rw-darkmode-bg);
   color: var(--rw-darkmode-text);
 
-  .hero,
-  .blogs,
-  .blogpost-card,
-  .blog-card-author-infos,
-  .calculator,
-  .calc-inner-input-wrapper{
-    background-color: var(--rw-darkmode-bg);
+  header,
+  main,
+  nav,
+  .nav-link-container a,
+  .login-status-container span,
+  .login-status-container a,
+  .content-wrapper,
+  h1, h2, h3, p
+  {
+    color: var(--rw-darkmode-text);
   }
 }
